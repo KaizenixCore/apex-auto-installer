@@ -1,0 +1,57 @@
+cat > ~/apex-auto-installer/.gitignore << 'EOF'
+# ═══════════════════════════════════════════
+# فایل‌های بزرگ و غیرضروری
+# ═══════════════════════════════════════════
+
+# APEX installation files (too large for GitHub)
+apex/
+apex_*.zip
+*.zip
+
+# Oracle data files
+*.dbf
+*.log
+*.trc
+
+# Docker volumes
+oracle_data/
+ords_config/
+
+# ═══════════════════════════════════════════
+# فایل‌های سیستمی
+# ═══════════════════════════════════════════
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ═══════════════════════════════════════════
+# فایل‌های محرمانه
+# ═══════════════════════════════════════════
+
+# Environment files with secrets
+.env
+.env.local
+.env.production
+
+# Keep example env
+!.env.example
+!docker/.env.example
+
+# META-INF (from zip extraction)
+META-INF/
+EOF
+
+echo "✅ .gitignore ساخته شد!"
