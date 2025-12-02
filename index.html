@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نصاب هوشمند Oracle APEX | KaizenixCore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- هدر -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <h1>نصاب هوشمند Oracle APEX</h1>
+            </div>
+            <p class="subtitle">نصب خودکار، هوشمند و بدون دردسر</p>
+        </header>
+
+        <!-- کارت اصلی -->
+        <main class="main-card">
+            <!-- مرحله ۱: تشخیص سیستم -->
+            <section class="step active" id="step-detect">
+                <div class="step-header">
+                    <span class="step-number">۱</span>
+                    <h2>تشخیص سیستم</h2>
+                </div>
+                <div class="step-content">
+                    <div class="system-info">
+                        <div class="info-item">
+                            <span class="label">سیستم‌عامل:</span>
+                            <span class="value" id="os-name">در حال شناسایی...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">معماری:</span>
+                            <span class="value" id="arch">در حال شناسایی...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Docker:</span>
+                            <span class="value" id="docker-status">در حال بررسی...</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- مرحله ۲: انتخاب نصب -->
+            <section class="step" id="step-select">
+                <div class="step-header">
+                    <span class="step-number">۲</span>
+                    <h2>انتخاب اجزا</h2>
+                </div>
+                <div class="step-content">
+                    <div class="components">
+                        <label class="component-item">
+                            <input type="checkbox" checked disabled>
+                            <span class="checkmark"></span>
+                            <div class="component-info">
+                                <strong>🐳 Docker</strong>
+                                <small>موتور کانتینر (الزامی)</small>
+                            </div>
+                        </label>
+                        <label class="component-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <div class="component-info">
+                                <strong>🗄️ Oracle Database 21c XE</strong>
+                                <small>پایگاه داده اوراکل</small>
+                            </div>
+                        </label>
+                        <label class="component-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <div class="component-info">
+                                <strong>🌐 ORDS + APEX 24.2</strong>
+                                <small>محیط توسعه وب</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- مرحله ۳: نصب -->
+            <section class="step" id="step-install">
+                <div class="step-header">
+                    <span class="step-number">۳</span>
+                    <h2>نصب خودکار</h2>
+                </div>
+                <div class="step-content">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">۰٪</span>
+                    </div>
+                    <div class="log-container">
+                        <div class="log" id="install-log">
+                            <!-- لاگ‌های نصب اینجا نمایش داده میشه -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- مرحله ۴: تکمیل -->
+            <section class="step" id="step-complete">
+                <div class="step-header">
+                    <span class="step-number">✓</span>
+                    <h2>نصب کامل شد!</h2>
+                </div>
+                <div class="step-content">
+                    <div class="success-message">
+                        <span class="success-icon">🎉</span>
+                        <p>Oracle APEX با موفقیت نصب شد!</p>
+                        <a href="http://localhost:8080/ords/apex" class="btn btn-primary" target="_blank">
+                            ورود به APEX
+                        </a>
+                    </div>
+                    <div class="credentials">
+                        <h3>اطلاعات ورود:</h3>
+                        <div class="credential-item">
+                            <span class="label">Workspace:</span>
+                            <code>INTERNAL</code>
+                        </div>
+                        <div class="credential-item">
+                            <span class="label">Username:</span>
+                            <code>ADMIN</code>
+                        </div>
+                        <div class="credential-item">
+                            <span class="label">Password:</span>
+                            <code>Kaizenix123!</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- دکمه‌های کنترل -->
+        <div class="controls">
+            <button class="btn btn-secondary" id="btn-prev" disabled>قبلی</button>
+            <button class="btn btn-primary" id="btn-next">شروع نصب</button>
+        </div>
+
+        <!-- فوتر -->
+        <footer class="footer">
+            <p>ساخته شده با ❤️ توسط <a href="https://github.com/KaizenixCore" target="_blank">KaizenixCore</a></p>
+        </footer>
+    </div>
+
+    <script src="assets/js/installer.js"></script>
+</body>
+</html>
